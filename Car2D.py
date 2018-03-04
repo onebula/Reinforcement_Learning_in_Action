@@ -21,7 +21,7 @@ class Car2DEnv(gym.Env):
         self.target_y = 0
         self.L = 10
         self.action_space = spaces.Discrete(5) # 0, 1, 2，3，4: 不动，上下左右
-        self.observation_space = spaces.Box(np.array([self.L, self.L]), np.array([self.L, self.L]))
+        self.observation_space = spaces.Box(np.array([-self.L, -self.L]), np.array([self.L, self.L]))
         self.state = None
     
     def step(self, action):
